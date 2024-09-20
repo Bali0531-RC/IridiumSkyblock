@@ -118,3 +118,14 @@ tasks {
         targetCompatibility = JavaVersion.VERSION_17.toString()
     }
 }
+publishing {
+    publications.create<MavenPublication>("maven") {
+        groupId = "com.github.Bali0531-RC"
+        artifactId = "IridiumSkyBlock"
+        version = version
+        artifact(tasks["shadowJar"])
+    }
+
+    // Ensure the publish task depends on jar
+    tasks["publishMavenPublicationToMavenLocal"].dependsOn(tasks["jar"])
+}
