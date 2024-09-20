@@ -117,13 +117,10 @@ tasks {
         targetCompatibility = JavaVersion.VERSION_17.toString()
     }
 }
-
-// Maven publishing
-publishing {
-    publications.create<MavenPublication>("maven") {
-        setGroupId("com.iridium")
-        setArtifactId("IridiumSkyblock")
-        setVersion(version)
-        artifact(tasks["shadowJar"])
-    }
+dependencyResolutionManagement {
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositories {
+		mavenCentral()
+		maven { url 'https://jitpack.io' }
+	}
 }
