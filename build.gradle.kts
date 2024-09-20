@@ -26,7 +26,7 @@ dependencies {
     implementation("org.jetbrains:annotations:24.1.0")
     implementation("com.j256.ormlite:ormlite-core:6.1")
     implementation("com.j256.ormlite:ormlite-jdbc:6.1")
-    implementation("com.github.Bali0531-RC:IridiumTeams:2.5.8")
+    implementation("com.github.Bali0531-RC:IridiumTeams:master-SNAPSHOT")
     implementation("commons-lang:commons-lang:2.6")
 
     // Other dependencies that are not required or already available at runtime
