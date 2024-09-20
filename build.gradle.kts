@@ -16,9 +16,10 @@ repositories {
     maven("https://ci.ender.zone/plugin/repository/everything/")
     maven("https://nexus.iridiumdevelopment.net/repository/maven-releases/")
     maven("https://papermc.io/repo/repository/maven-public/")
-    maven("https://jitpack.io")
+    maven { url = uri("https://jitpack.io") }
     maven("https://maven.enginehub.org/repo/")
 }
+
 
 dependencies {
     // Dependencies that we want to shade in
