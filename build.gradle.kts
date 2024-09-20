@@ -118,9 +118,16 @@ tasks {
     }
 }
 dependencyResolutionManagement {
-	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-	repositories {
-		mavenCentral()
-		maven { url 'https://jitpack.io' }
-	}
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+        maven("https://ci.ender.zone/plugin/repository/everything/")
+        maven("https://nexus.iridiumdevelopment.net/repository/maven-releases/")
+        maven("https://papermc.io/repo/repository/maven-public/")
+        maven("https://jitpack.io")
+        maven("https://maven.enginehub.org/repo/")
+    }
 }
+
